@@ -57,6 +57,13 @@ colPerc(table1)
 The numerical results indicate that of the people who were infected with aids 24.29 percent used the drug and got sick. It also demonstrates that of the people who got infected with aids 75.71 percent took the placebo and got sick. This indicates the drug is effective. 
 ## Inferential Results
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The Fisher's Exact Test indicates that the odds ratio for a person who took the drug and their likelihood that they will get aids is 0.3534128. Therefore, you are three times less likely to get infected with aids if you take the drug and three times more likely to get infected with aids if you don't take the drug. These results are with respect to the subpopulation of the DrugUsers.
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
