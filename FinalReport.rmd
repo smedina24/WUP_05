@@ -12,13 +12,13 @@ triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 ```
 
 # Introduction
-
+Using the data from the triumpsal clinical trials I will try to determine if the drug appears to be effective or not. We will only consider the results of the drug users to determine if the drug is effective or not. We will obtain this subpopulation using dplyr and the filer command.
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the DrugUsers, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
 # Methods
-
+We will be using two helper files Mytricks and Cat_Cat to solve this problem. The Mytricks helper file will allow me to change the character variables into factor variables. We will use Numerical, Graphical, and Inferential methods. In order to obtain the subpopulation of the drug users we will use dplyr with the filter command. 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 # Results
