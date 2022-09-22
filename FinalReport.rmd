@@ -13,6 +13,11 @@ triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 
 # Introduction
 Using the data from the triumpsal clinical trials I will try to determine if the drug appears to be effective or not. We will only consider the results of the drug users to determine if the drug is effective or not. We will obtain this subpopulation using dplyr and the filer command.
+
+```{r eval=FALSE}
+triUmp <- triUmp %>%
+mutate(across(where(is.character), as.factor))
+```
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the DrugUsers, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
@@ -21,6 +26,9 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 We will be using two helper files Mytricks and Cat_Cat to solve this problem. The Mytricks helper file will allow me to change the character variables into factor variables. We will use Numerical, Graphical, and Inferential methods. In order to obtain the subpopulation of the drug users we will use dplyr with the filter command. 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+```{r}
+DrugUser<-filter(triUmp, DrugUser=="yes" )
+```
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -28,6 +36,13 @@ We will be using two helper files Mytricks and Cat_Cat to solve this problem. Th
 ## Descriptive Results
 
 ### Graphical Descriptive Results
+
+```{r}
+barchartGC(~infected + treatment,data=DrugUser)
+barchartGC(~infected + treatment,data=DrugUser, type="percent")
+```
+
+The Graph demonstrates that the drug is effective. The percentage of the people that got aids and used the drug is significantly lower than the ones who got aids and took the placebo. Of those that got aids 25 percent had taken the drug and 75 percent had taken the placebo. This indicates the drug is effective because the percentages are significantly different from one another. 
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
