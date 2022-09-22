@@ -69,4 +69,6 @@ The Fisher's Exact Test indicates that the odds ratio for a person who took the 
 
 # Discussion and Conclusion
 
+After analyzing the sub population of the DrugUsers. The results indicate that the DrugUsers are three times more likely to get infected with aids if they do not take the drug. DrugUsers are also three times less likely to get infected with aids if they take the drug. Therefore, it is recommended that the sub population of DrugUsers take the drug in order to prevent being infected with aids. 
+
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
